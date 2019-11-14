@@ -10,7 +10,7 @@ pipeline {
                 //archiveArtifacts artifacts: '**/*'
                 //archiveArtifacts artifacts: '**/*.zip'
                 bat 'mkdir -p archive'
-                //bat 'echo test > archive/test.txt'
+                bat 'echo test > archive/test.txt'
                 script{
                     zip archive: true, dir: 'archive', glob: '', zipFile: 'coverage-files.zip'
                 }
