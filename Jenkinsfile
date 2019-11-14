@@ -8,7 +8,12 @@ pipeline {
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/trainSchedule.zip'
                 //archiveArtifacts artifacts: '**/*'
-                archiveArtifacts artifacts: '**/*.zip'
+                //archiveArtifacts artifacts: '**/*.zip'
+                bat 'mkdir -p archive'
+                bat 'echo test > archive/test.txt'
+                script{
+                    zip archive: true, dir: 'archive', glob: '', zipFile: 'coverage-files.zip'
+                }
             }
         }
          stage('Test') {
