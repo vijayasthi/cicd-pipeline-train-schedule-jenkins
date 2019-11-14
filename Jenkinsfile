@@ -8,5 +8,10 @@ pipeline {
                 //archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
+         stage('Test') {
+            steps {
+                echo 'Test build automation'
+            }
+        }
     }
 }
