@@ -8,6 +8,7 @@ pipeline {
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
                 zip zipFile: 'trainSchedule.zip'
+                archiveArtifacts 'trainSchedule.zip'
                 //script{
                 //    zip archive: true, dir: '', glob: '', zipFile: 'trainSchedule.zip'
                 //}
