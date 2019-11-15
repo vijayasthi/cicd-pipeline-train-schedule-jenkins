@@ -9,8 +9,8 @@ pipeline {
                 //archiveArtifacts artifacts: 'dist/trainSchedule.zip'
                 //archiveArtifacts artifacts: '**/*'
                 //archiveArtifacts artifacts: '**/*.zip'
-                bat 'mkdir -p archives'
-                bat 'echo thetest > archives/testa.txt'
+                bat 'mkdir -p archive'
+                bat 'echo thetest > archive/test.txt'
             }
         }
          stage('Test') {
