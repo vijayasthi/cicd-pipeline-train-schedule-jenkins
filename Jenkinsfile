@@ -7,9 +7,10 @@ pipeline {
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
-                script{
-                    zip archive: true, dir: '', glob: '', zipFile: 'trainSchedule.zip'
-                }
+                zip zipFile: 'trainSchedule.zip'
+                //script{
+                //    zip archive: true, dir: '', glob: '', zipFile: 'trainSchedule.zip'
+                //}
                 //archiveArtifacts artifacts: 'trainSchedule.zip'
                 //archiveArtifacts artifacts: 'trainSchedule1.zip'
                 //archiveArtifacts(artifacts: 'dist/*')
