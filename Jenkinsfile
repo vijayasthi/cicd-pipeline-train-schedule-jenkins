@@ -8,9 +8,7 @@ pipeline {
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/trainSchedule.zip'
                 //archiveArtifacts artifacts: '**/*'
-                //archiveArtifacts artifacts: '**/*.zip'
-                bat 'mkdir -p archive'
-                bat 'echo thetest > archive/test.txt'
+                archiveArtifacts artifacts: '**/*.zip'
             }
         }
          stage('Test') {
