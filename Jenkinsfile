@@ -6,7 +6,7 @@ pipeline {
                 echo 'Running build automation'
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
-                archiveArtifacts artifacts: 'trainSchedule1.zip'
+                archiveArtifacts artifacts: 'train-schedule1.zip'
                 //archiveArtifacts artifacts: 'trainSchedule1.zip'
                 //archiveArtifacts(artifacts: 'dist/*')
                 //archiveArtifacts(artifacts: 'dist/*.zip', fingerprint: true) 
