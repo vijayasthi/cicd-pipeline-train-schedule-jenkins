@@ -16,7 +16,7 @@ pipeline {
                 //archiveArtifacts artifacts: 'trainSchedule1.zip'
                 //archiveArtifacts(artifacts: 'dist/*')
                 //archiveArtifacts(artifacts: 'dist/*.zip', fingerprint: true) 
-                archiveArtifacts artifacts: '**/*'
+                //archiveArtifacts artifacts: '**/*'
                 //archiveArtifacts artifacts: '**/*.zip'
                 //script{
                     //zip archive: true, dir: '', glob: '', zipFile: 'testz.zip'
