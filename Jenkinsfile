@@ -7,8 +7,8 @@ pipeline {
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/trainSchedule.zip'
-                //archiveArtifacts artifacts: '**/*'
-                archiveArtifacts artifacts: '**/*.zip'
+                archiveArtifacts artifacts: '**/*'
+                //archiveArtifacts artifacts: '**/*.zip'
             }
         }
          stage('Test') {
