@@ -11,7 +11,7 @@ pipeline {
 					def filez = {fileExists: 'dist/train-schedule1_master.zip'}
 					        if (
 								expression { filez == 'true' })
-								bat 'del /f dist/*.zip'
+								bat 'del /f dist/train-schedule1_master.zip'
 						}
                 script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
