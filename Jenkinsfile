@@ -11,16 +11,13 @@ pipeline {
                 //    zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
                 //}
                 //archiveArtifacts artifacts: '**/*'
-                     stage('Copy Archive') {
+         stage('Copy Archive') {
             steps {
                 script {
-                    step ([$class: 'CopyArtifact',
-                    projectName: 'train-schedule1_master',
-                    target: 'dist']);
+                    step ([$class: 'CopyArtifact', projectName: 'train-schedule1_master', target: 'dist']);
              }
          }
             }
-        }
          stage('Test') {
             steps {
                 echo 'Test build automation'
