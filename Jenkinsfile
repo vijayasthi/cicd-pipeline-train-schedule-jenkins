@@ -7,6 +7,14 @@ pipeline {
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
+				script{
+					def file = new File( 'dist/train-schedule1.zip' )
+						if( file.exists() ) {
+							bat 'rm dist/train-schedule1.zip'
+						} else {
+                        println "File doesn't exist and good to go"
+						}
+                }
                 script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
 			zip zipFile: 'dist/train-schedule1.zip', archive: true, glob: '', dir: ''
