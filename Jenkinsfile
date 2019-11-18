@@ -12,11 +12,19 @@ pipeline {
                 //}
                 //archiveArtifacts artifacts: '**/*'
             }
-			}
-         stage('Test') {
+		}
+        stage('Test') {
             steps {
                 echo 'Test build automation'
-            }
-        }
-    }
+			}
+		}
+		
+		stage('Copy Archive') {
+         steps {
+             script {
+                 step ([$class: 'CopyArtifact', projectName: 'train-schedule1_master', target: 'dist']);
+				}
+			}
+		}
+	}
 }
