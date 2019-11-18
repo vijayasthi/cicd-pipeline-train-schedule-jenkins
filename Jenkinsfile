@@ -10,7 +10,7 @@ pipeline {
                 script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
 			zip zipFile: 'dist/nameOfFile', archive: true
-                //}
+                }
                 //archiveArtifacts artifacts: '**/*'
             }
 		}
