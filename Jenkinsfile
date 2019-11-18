@@ -9,9 +9,9 @@ pipeline {
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
 		script{
 			//def file = new File( 'dist/train-schedule1.zip' )
-			def file = findFiles(glob: 'dist/train-schedule1.zip')
+			def file = findFiles(glob: 'dist/*.zip')
 				if( file.exists() ) {
-					bat 'rm dist/train-schedule1.zip'
+					bat 'rm dist/*.zip'
 				} else {
                 			println "File doesn't exist and good to go"
 						}
