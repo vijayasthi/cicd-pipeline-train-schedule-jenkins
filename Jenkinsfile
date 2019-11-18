@@ -8,7 +8,7 @@ pipeline {
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
 				script{
-					def filez = fileExists: 'dist/train-schedule1_master.zip'
+					def filez = {fileExists: 'dist/train-schedule1_master.zip'}
 					        when {
 								expression { filez == 'true' }
 								bat rm 'dist/*.zip'
