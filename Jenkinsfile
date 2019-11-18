@@ -23,13 +23,13 @@ pipeline {
 	    post {
         success {
             echo 'I succeeeded!'
-	    echo ${currentBuild.fullDisplayName}"
-            echo ${env.BUILD_URL}"
+	    echo ${currentBuild.fullDisplayName}
+            echo ${env.BUILD_URL}
         }
         failure {
             echo 'I failed :('
-	    echo ${currentBuild.fullDisplayName}"
-            echo ${env.BUILD_URL}"
+	    echo ${currentBuild.fullDisplayName}
+            echo ${env.BUILD_URL}
         }
     }
 }
