@@ -22,7 +22,7 @@ pipeline {
 		stage('Copy Archive') {
          steps {
              script {
-                 step ([$class: 'CopyArtifact', projectName: 'train-schedule1', target: 'dist']);
+                 step ([$class: 'CopyArtifact', projectName: env.JOB_NAME, target: 'dist']);
 				}
 			}
 		}
