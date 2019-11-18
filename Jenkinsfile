@@ -25,17 +25,11 @@ pipeline {
             echo 'I succeeeded!'
 	    echo "Succeeded Pipeline: ${currentBuild.fullDisplayName}"
             echo "${env.BUILD_URL}"
-	    mail to: 'arvk79@gmail.com',
- 		subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
-             	body: "All is well with ${env.BUILD_URL}"
         }
         failure {
             echo 'I failed :('
 	    echo "Failed Pipeline: ${currentBuild.fullDisplayName}"
             echo "${env.BUILD_URL}"
-	    mail to: 'arvk79@gmail.com',
- 		subject: " Pipeline Failure: ${currentBuild.fullDisplayName}",
-             	body: "Something is wrong with ${env.BUILD_URL}"
         }
     }
 }
