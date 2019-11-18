@@ -9,7 +9,7 @@ pipeline {
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
                 script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
-			zip zipFile: 'dist/nameOfFile', archive: true
+			zip zipFile: 'dist/nameOfFile', archive: true, glob: '', dir: ''
                 }
                 //archiveArtifacts artifacts: '**/*'
             }
