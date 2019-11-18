@@ -7,8 +7,9 @@ pipeline {
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
-                //script{
-                //    zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
+                script{
+                    //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
+			zip zipFile: 'dist/nameOfFile', archive: true, dir: , glob:
                 //}
                 //archiveArtifacts artifacts: '**/*'
             }
@@ -16,14 +17,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test build automation'
-			}
-		}
-		
-		stage('Copy Archive') {
-         steps {
-             script {
-                 step ([$class: 'CopyArtifact', projectName: env.JOB_NAME, target: 'dist']);
-				}
 			}
 		}
 	}
