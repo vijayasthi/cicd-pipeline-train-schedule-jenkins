@@ -7,26 +7,18 @@ pipeline {
                 //sh './gradlew build --no-daemon'
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
-                script{
-                    zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
-                }
                 //script{
-                    //zip zipFile: 'dist/trainSchedule'
-                    //archiveArtifacts artifacts: 'trainSchedule.zip'
-                //    zip archive: true, dir: '', glob: '', zipFile: 'nameOfFile'
-                //    }
-                //script{
-                //    zip archive: true, dir: '', glob: '', zipFile: 'trainSchedule.zip'
+                //    zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
                 //}
-                //archiveArtifacts artifacts: 'trainSchedule.zip'
-                //archiveArtifacts artifacts: 'trainSchedule1.zip'
-                //archiveArtifacts(artifacts: 'dist/*')
-                //archiveArtifacts(artifacts: 'dist/*.zip', fingerprint: true) 
                 //archiveArtifacts artifacts: '**/*'
-                //archiveArtifacts artifacts: '**/*.zip'
-                //script{
-                    //zip archive: true, dir: '', glob: '', zipFile: 'testz.zip'
-                //}
+                     stage('Copy Archive') {
+            steps {
+                script {
+                    step ([$class: 'CopyArtifact',
+                    projectName: 'train-schedule1_master',
+                    target: 'dist']);
+             }
+         }
             }
         }
          stage('Test') {
