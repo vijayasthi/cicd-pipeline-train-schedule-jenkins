@@ -10,9 +10,9 @@ pipeline {
 			def exists = 'dist/train-schedule1_master.zip'
 			if (exists) {
 				dir('dist') {deleteDir()}
-			} else {
-				echo "Dir and File doesn't exist, new ones will be created"
-				}
+			} //else {
+				//echo "Dir and File doesn't exist, new ones will be created"
+				//}
 			}
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
