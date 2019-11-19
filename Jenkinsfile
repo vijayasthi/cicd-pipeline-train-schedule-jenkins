@@ -9,11 +9,9 @@ pipeline {
 		script{
 			def exists = 'dist/train-schedule1_master.zip'
 			if (exists) {
-				//dir('dist') {deleteDir()}
-				echo 'aaaaaaaaaaaa'
-			} else {
-				//echo "File doesn't exist"
 				dir('dist') {deleteDir()}
+			} else {
+				echo "Dir and File doesn't exist, new ones will be created"
 				}
 			}
                 bat './gradlew.bat --no-daemon'
