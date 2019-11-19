@@ -10,8 +10,10 @@ pipeline {
 			def exists = 'dist/train-schedule1_master.zip'
 			if (exists) {
 				dir('dist') {deleteDir()}
+				echo 'aaaaaaaaaaaa'
 			} else {
-				println "File doesn't exist"
+				echo "File doesn't exist"
+				dir('dist') {deleteDir()}
 				}
 			}
                 bat './gradlew.bat --no-daemon'
