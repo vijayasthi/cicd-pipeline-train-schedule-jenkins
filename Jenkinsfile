@@ -6,14 +6,14 @@ pipeline {
                 echo 'Running build automation'
                 //sh './gradlew build --no-daemon'
 		//dir('dist') {deleteDir()}
-		script{
+		/*this block is commented script{
 			def zipdirexists = 'dist/train-schedule1_master.zip'
 			if (zipdirexists) {
 				dir('dist') {deleteDir()}
 			} //else {
 				//echo "Dir and File doesn't exist, new ones will be created"
 				//}
-			}
+			}*/
                 bat './gradlew.bat --no-daemon --warning-mode all'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
                 script{
