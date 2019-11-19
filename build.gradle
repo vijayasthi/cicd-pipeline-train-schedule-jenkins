@@ -26,8 +26,9 @@ task zip(type: Zip) {
 	//destinationDirectory("C:/Program Files (x86)/Jenkins/workspace/train-schedule1_master/build/dist")
 	//archiveBaseName "trainSchedule"
 	
-	archiveFileName = "my-distribution.zip"
+	//archiveFileName = "my-distribution.zip"
     	destinationDirectory = file("$buildDir/dist")
+	archiveBaseName "trainSchedule"
 }
 
 //declare task dependencies
