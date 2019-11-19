@@ -23,7 +23,7 @@ task zip(type: Zip) {
 		include "routes/**"
 		include "views/**"
 	}
-	destinationDirectory("$buildDir/dist")
+	destinationDirectory("C:\Program Files (x86)\Jenkins\workspace\train-schedule1_master\build/dist")
 	archiveBaseName "trainSchedule"
 }
 
