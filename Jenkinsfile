@@ -9,10 +9,10 @@ pipeline {
 		script{
 			def exists = 'dist/train-schedule1_master.zip'
 			if (exists) {
-				dir('dist') {deleteDir()}
+				//dir('dist') {deleteDir()}
 				echo 'aaaaaaaaaaaa'
 			} else {
-				echo "File doesn't exist"
+				//echo "File doesn't exist"
 				dir('dist') {deleteDir()}
 				}
 			}
