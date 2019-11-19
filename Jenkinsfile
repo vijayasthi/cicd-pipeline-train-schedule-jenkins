@@ -5,7 +5,7 @@ pipeline {
             steps {
                 echo 'Running build automation'
                 //sh './gradlew build --no-daemon'
-		    dir('dist') {deleteDir()} {echo 'dir and zipfile delete success'}
+		   // dir('dist') {deleteDir()}
                 bat './gradlew.bat --no-daemon'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
                 script{
