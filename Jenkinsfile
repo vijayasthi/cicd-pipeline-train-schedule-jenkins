@@ -7,8 +7,8 @@ pipeline {
                 //sh './gradlew build --no-daemon'
 		//dir('dist') {deleteDir()}
 		script{
-			def exists = 'dist/train-schedule1_master.zip'
-			if (exists) {
+			def zipdirexists = 'dist/train-schedule1_master.zip'
+			if (zipdirexists) {
 				dir('dist') {deleteDir()}
 			} //else {
 				//echo "Dir and File doesn't exist, new ones will be created"
