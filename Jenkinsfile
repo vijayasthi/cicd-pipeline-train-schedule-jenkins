@@ -14,7 +14,7 @@ pipeline {
 				//echo "Dir and File doesn't exist, new ones will be created"
 				//}
 			}
-                bat './gradlew.bat --no-daemon'
+                bat './gradlew.bat --no-daemon --warning-mode all'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
                 script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
