@@ -13,13 +13,13 @@ pipeline {
 			} //else {
 				//echo "Dir and File doesn't exist, new ones will be created"
 				//}
-			}*/
+			}this block is commented script*/
                 bat './gradlew.bat --no-daemon --warning-mode all'
                 //archiveArtifacts artifacts: 'dist/train-schedule1_master.zip'
-                script{
+                /*aaa script{
                     //zip archive: true, dir: 'train-schedule1_master', glob: '', zipFile: 'nameOfFile'
 			zip zipFile: 'dist/train-schedule1.zip', archive: true, glob: '', dir: ''
-                }
+                }aaa*/
                 //archiveArtifacts artifacts: '**/*'
             }
 		}
